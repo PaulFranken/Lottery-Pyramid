@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="${request.static_url('pyramidlotto:static/style.css')}" rel="stylesheet">
+    <script src="${request.static_url('pyramidlotto:static/jquery-1.11.3.min.js')}"></script>
+    <script src="${request.static_url('pyramidlotto:static/jquery-1.11.3.min.js')}"></script>
+    <script src="${request.static_url('pyramidlotto:static/script.js')}"></script>
+
+</head>
+<body>
+<p id="title">WELCOME TO POWERBALL!</p>
+
+<div id="menuButtons">
+    <button id="getTickets" class="menuButton">Get tickets</button>
+    <button id="playButton" class="menuButton">Play!</button>
+</div>
+<div id="ticketsDiv">
+    <form id="ticketsForm">
+        <div>
+            <label for="ticketsText" id="labelText">Name: </label>
+            <input type="text" id="ticketsText"/><br>
+        </div>
+        <div>
+            <label for="ticketsNumber" id="labelNumbers">Number of tickets: </label>
+            <input type="number" id="ticketsNumber" min="1" max="20"/><br>
+            <button type="button" id="ticketsBtn" onclick="getTickets()">Get Tickets!</button>
+        </div>
+        <div id="ticketList">
+
+        </div>
+    </form>
+
+</div>
+
+<div id="playersDiv">
+    <form id="playForm">
+        <label for="players" id="playersLabel">Player: </label>
+        <select id="players" name="players"></select>
+        <button type="button" id="playBtn">Play!</button>
+    </form>
+</div>
+
+<div id="wrap">
+    <div id="results">
+
+    </div>
+</div>
+</body>
+</html>
